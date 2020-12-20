@@ -1,3 +1,4 @@
+/*
 // Promise example
 function friendGetsPizza() {
   return new Promise((resolve, reject)  => {
@@ -15,3 +16,4 @@ friendGetsPizza()
   .catch((e) => {
    console.log('Take friend out  of friends because he', e)
 });
+*/

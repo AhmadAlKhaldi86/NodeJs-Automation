@@ -1,12 +1,12 @@
 // read data from updateData.js to be able to use it to update config.json
 const fs = require('fs');
-const updateData    = require('./updateData');
+const updateData    = require('./source');
 
 // Array search
 const getUpdateData = (stockId) => {
-  var result = updateData.filter(doc => doc['stockId'] == stockId)
-  console.log(result)
-  return result
+   result = updateData.filter(doc => doc['stockId'] == stockId)
+   if (result.length === 0 ){return undefined}
+   return result
 }
 
 // if it was an object

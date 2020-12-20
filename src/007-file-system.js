@@ -23,16 +23,15 @@ readJson(file).then(data => console.log(data));
 */
 
 
-// Get new data from a file (../config/updateData)
-// Update (../config/config.json) with data from above line
+// Get new data from a file (./007-conf/source)
+// Update (./007-conf/target) with data from above line
 // Real world we will get the data from an api. 
-const execFile      = require('../config/readWrite');
+const execFile      = require('./007-conf/getAddData');
 const getUpdateData = execFile.getUpdateData;
 const writeJson     = execFile.writeJson;
 
 
 const args = process.argv.slice(2);
-
 const stockId = args[0] || 2 // get stockId from customer 
 const updateData = getUpdateData(stockId) // use number to get the stock from other file.
 
@@ -41,8 +40,8 @@ if (  updateData === undefined ) {
   process.exit(0)
 }
 
-const CONFIG_FILE   = 'config.json'
-const newConfigFile = path.join(__dirname, '../config', CONFIG_FILE)
+const CONFIG_FILE   = 'target.json'
+const newConfigFile = path.join(__dirname, './007-conf', CONFIG_FILE)
 
 writeJson(newConfigFile, updateData)
   .then(msg => console.log(msg))
