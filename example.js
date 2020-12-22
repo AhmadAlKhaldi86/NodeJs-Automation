@@ -17,3 +17,17 @@ friendGetsPizza()
    console.log('Take friend out  of friends because he', e)
 });
 */
+
+/*
+// Another simple Promise example 
+const prom = input => new Promise((resolve, reject) => {
+  if (!input) {
+    reject(`Not Passed`)
+  }
+  resolve(input)
+})
+
+prom('')
+  .then(output => console.log(output))
+  .catch((err) => console.log(err))
+*/

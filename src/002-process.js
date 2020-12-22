@@ -15,8 +15,8 @@ stdout :
   - \n with process.stdout.write must be used.
 */
 
-process.stdout.write('Hello I am writing to standard output\n');
+// process.stdout.write('Hello I am writing to standard output\n');
 
-process.stdout.write(`current working dir is ${process.cwd()}\n`);
+// process.stdout.write(`current working dir is ${process.cwd()}\n`);
 
-console.log(`This script has been running for ${process.uptime()}\n`)
+// console.log(`This script has been running for ${process.uptime()}\n`)

@@ -1,11 +1,16 @@
-// Spawn new child process to handle execution of opening a  browser. 
-// This  requires more memory for child and current  script can use. 
-// Child process is created by a parent . In node by (fork,spawn,exec,execFille).
-// Use exec when data  returned is small as the output is buffered then all result is passed to callback. 
+// Spawn new child process to handle execution of opening a browser. 
+// This requires more memory for child and current  script can use. 
+// Child process is created by a parent. In node by execution of (fork,spawn,exec,execFille).
+// Use exec when data returned is small as the output is buffered then all result is passed to callback. 
 // Use spawn to stream back data in chunks.
-// Use execFile to execute a  file without using shell. 
-// Use fork (variation of spawn) invokes a module that establishes communication channel to pass messages  between parent and child
+// Use execFile to execute a file without using shell. 
+// Use fork (variation of spawn) invokes a module that establishes communication channel to pass messages between parent and child
 
+
+// Task : Run this script and pass google url.
+// Check url if passed 
+// check os platform running the script
+// based on os run command
 const {platform}       = require('os');
 const {exec}           = require('child_process');
 const WINDOWS_PLATFORM = 'win32';

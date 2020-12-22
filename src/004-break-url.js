@@ -1,10 +1,7 @@
 const url = require('url');
 
 const args = process.argv.slice(2);
-
-console.log(args)
-const urlPassed = args.toString()
-console.log(urlPassed)
+const urlPassed = args.toString();
 
 if ( urlPassed === undefined ) {
   console.error('Please pass a url')
