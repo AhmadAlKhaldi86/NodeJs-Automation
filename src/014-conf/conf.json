@@ -1,0 +1,10 @@
+{
+  "FROM_EMAIL": "aalkhald@ford.com",
+  "TO_MAI"    : "aalkhald@ford.com",
+  "HOST"      : "smtp.google.com",
+  "PORT"      : "25",
+  "AUTH"      : {
+    "USERNAME": "AHMAD",
+    "PASS": "AHMAD123"
+  }
+}
