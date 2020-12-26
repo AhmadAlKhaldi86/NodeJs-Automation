@@ -14,12 +14,15 @@ if (emailData.length !== requiredArgs) {
 const [subject, body] = emailData;
 const { HOST, PORT, FROM_EMAIL, TO_MAIL} = conf;
 
-// configure nodemailer 
+// configure nodemailer to send msg using this config.host.port.
 const transporter = nodemailer.createTransport({
   host: HOST,
   port: PORT,
   secure: false,
-})
+  // If authentication required this is where you add them. 
+});
+
+// construct your message
 const message = {
   from: FROM_EMAIL,
   to:   TO_EMAIL,
@@ -28,7 +31,7 @@ const message = {
   html: `<p>${body}</p>`
 }
 
-// send  email 
+// send email and use a call back to catch errors. 
 transporter.sendMail(message, (err, info) => {
   if (err) {
     console.log(err.message)
