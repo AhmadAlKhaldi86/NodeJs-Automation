@@ -1,12 +1,12 @@
 // Each template acts as skeleton for the application. 
-// so if you have multiple applications you can have templates to start building each one.
+// So if you have multiple applications you can have templates to start building each one.
+// Need to choose one of the templates  to start building your application.
 require('colors');
-const rls     = require('readline-sync');
+const rls     = require('readline-sync'); // Allows script  to have conversation with user such as asking questions. 
 const path    = require('path');
-const fsExtra = require('fs-extra');
+const fsExtra = require('fs-extra'); // Allows the script to read/copy whole directories.
 
-// Goal is to read the 0014/templates directories and return an array. 
-// One of them need to be copied. 
+// Goal is to read the 0013/templates directory where all temps are saved then return an array of all available templates.
 const app_templates  = '013-conf';
 const No_Choice_Made = -1;
 
